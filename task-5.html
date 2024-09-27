@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const students = [
+            {'name':'John', 'marks':45},
+            {'name':'Jane','marks':72},
+            {'name':'Bob','marks':38},
+            {'name':'Alice','marks':85}
+        ];
+
+        function object(element,index,array){
+            if((element.marks)>50){
+                return (element.marks);
+                // console.log(element.marks)
+            }
+        }
+
+        let a = students.filter(object)
+        // console.log(a);
+
+        function names(element,index,array){
+                console.log(element.name);
+            
+        }
+
+        a.forEach(names);
+
+
+        //anonymous function
+        let b = students.filter(function(element,index,array){
+            if(element.marks>50){
+                return (element.marks);
+            }
+        })
+        // console.log(b);
+
+        let b1 = b.forEach(function(element,index,array){
+            console.log(element.name);
+        })
+
+
+        //arrow function
+
+        let c = students.filter((element)=> element.marks>50)
+        // console.log(c);
+
+        let c1 = c.forEach((element)=>console.log(element.name))
+      
+
+     
+    </script>
+</body>
+</html>

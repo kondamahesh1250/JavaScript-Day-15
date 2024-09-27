@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const words = ['apple','banana','grape'];
+
+        //named function
+        function toUpper(element,index,array){
+            // console.log(element.toUpperCase());
+            array[index]=element.toUpperCase();
+         
+        }
+        words.map(toUpper);
+        console.log(words);
+
+        //anonymous function
+        words.map(function(element,index,array){
+            array[index]=element.toUpperCase();
+        })
+        console.log(words);
+
+        //arrow function
+     let result =   words.map((element,index,array)=>array[index]=element.toUpperCase());
+     console.log(result);
+    </script>
+</body>
+</html>

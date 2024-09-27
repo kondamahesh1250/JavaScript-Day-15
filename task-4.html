@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const numbers = [4,10,15,6,25,8];
+
+        //named functions
+
+        function check(element,index,array){
+            if(element>=10){
+                return element;
+            }
+        }
+      let result =  numbers.filter(check);
+        console.log(result);
+
+        function square(element){
+            return element*element;
+        }
+
+        var result1 = result.map(square);
+        console.log(result1);
+
+        //anonymous function
+
+     let b = numbers.filter(function(element,index,array){
+            if(element>=10){
+                return element;
+            }
+        })
+        console.log(b);
+
+        let b1 = b.map(function(element,index,array){
+           return element*element;
+        })
+
+        console.log(b1);
+
+
+        //arrow function
+
+        let c = numbers.filter((element,index,array)=>element>=10);
+        console.log(c);
+
+        let c1 = c.map((element,index,array)=>element*element);
+        console.log(c1);
+    </script>
+</body>
+</html>

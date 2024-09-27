@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const numbers = [4,10,15,6,25,8];
+
+        //named function
+
+        function filters(element,index,array){
+            if(element>=10){
+                console.log(element);
+            }
+        }
+       numbers.filter(filters);
+
+        //anonymous function
+        
+     numbers.filter(function(element,index,array) {
+        if(element>=10){
+            console.log(element)
+        }
+    })
+
+    //arrow function
+    let result = numbers.filter((element,index,array)=>element>=10)
+    console.log(result)
+
+    </script>
+</body>
+</html>
